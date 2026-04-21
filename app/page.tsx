@@ -15,7 +15,7 @@ export default function BookLaunchLanding() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     if (email) {
       setIsSubmitted(true);
